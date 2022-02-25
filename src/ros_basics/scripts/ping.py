@@ -7,7 +7,7 @@ pub = rospy.Publisher("/ping", String, queue_size=10)
 rate = rospy.Rate(1) #1Hz = 1s
 
 while not rospy.is_shutdown():
-	msg = String()
-	msg.data = 2
-	pub.publish(msg)
-	rate.sleep()
+        word = "Ping" 
+        rospy.loginfo(word)
+        pub.publish(word)
+        rate.sleep()
