@@ -30,7 +30,6 @@ class TurtleBot:
         self.pose = data
         self.pose.x = round(self.pose.x, 4)
         self.pose.y = round(self.pose.y, 4)
-        self.pose.theta = round(self.pose.theta, 4)
 
     def euclidean_distance(self, goal_pose):
         """Euclidean distance between current pose and the goal."""
@@ -56,7 +55,6 @@ class TurtleBot:
         # Get the input from the user.
         goal_pose.x = float(input("Set your x goal: "))
         goal_pose.y = float(input("Set your y goal: "))
-        goal_pose.theta = float(input("Set orientation: "))
 
         # Please, insert a number slightly greater than 0 (e.g. 0.01).
         distance_tolerance = float(input("Set your tolerance: "))
